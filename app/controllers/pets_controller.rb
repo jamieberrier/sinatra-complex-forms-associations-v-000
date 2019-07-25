@@ -43,7 +43,7 @@ class PetsController < ApplicationController
     #@pet.update(name: params["name"])
 
     #@pet.update(owner_id: params["owner"]["id"])
-    binding.pry
+    #binding.pry
     @pet.update(params[:pet])
 
     if !params["owner"]["name"].empty?
