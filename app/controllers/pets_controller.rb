@@ -43,7 +43,7 @@ class PetsController < ApplicationController
     #@pet.update(name: params["name"])
 
     #@pet.update(owner_id: params["owner"]["id"])
-
+    binding.pry
     @pet.update(params[:pet])
 
     if !params["owner"]["name"].empty?
@@ -51,7 +51,7 @@ class PetsController < ApplicationController
     end
 
     @pet.save
-    
+
     redirect to "pets/#{@pet.id}"
   end
 end
